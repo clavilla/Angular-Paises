@@ -20,7 +20,7 @@ export class PaisInputComponent implements OnInit {
   termino: string = '';
 
   ngOnInit() {
-    this.debouncer
+    this.debouncer//Emite el valor 300 ms despues que la persona dejo de escribir
       .pipe(debounceTime(300))
       .subscribe( valor => {
       this.onDebaunce.emit(valor);
